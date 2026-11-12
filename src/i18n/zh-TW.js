@@ -80,8 +80,6 @@ export default {
   },
   // 關於我們
   about: {
-    oneTitle: '熱轉印燙畫',
-    oneDesc: '熱轉印燙畫是一種獨特的印刷技術，結合了熱轉印和燙畫兩種工藝的特點，將圖案印刷在特殊的轉印載體上，通過高溫高壓的方式將圖案轉印到衣物或其他布料上，形成持久且色彩鮮豔的裝飾效果。',
     twoTitle1: '永釆',
     twoTitle2: '是一家綠色環保的製造公司',
     twoDesc1: '作為一家環保型公司，永釆結合了多個方面來減少對環境的影響並最大限度地減少浪費。',
@@ -90,14 +88,18 @@ export default {
     threeTitle: '環保系統',
     threeDesc1: '永釆建立了我們自己的污水處理系統和污水處理池。工業廢水經過過濾、沉澱，轉化為清水循環使用。減少用水量，減少污染。',
     threeDesc2: '除了污水處理系統，我們還有自己的工業空氣淨化系統，其工作原理是將室內環境中受污染的空氣吸入過濾系統，使空氣通過一系列旨在有效去除所有有害顆粒的介質，然後將其釋放。',
+    prodTitle: '生產實景',
+    prodSub: 'Production Facilities',
+    productionLine: '生產線',
+    labelProcessing: '標籤加工',
+    qualityWork: '品質檢測',
+    equipment: '生產設備',
     certTitle: '企業證書',
     certSub: 'Enterprise Certificate',
-    certText1_1: '永釆更是Bluesign系統合作夥伴。並專注於可持續發展的未來。',
-    certText1_2: 'OEKO-TEX®使得永釆能夠通過負責任的決定，保護我們的地球。',
-    certText1_3: '永釆和「永采實業」簽訂製造協議',
-    certText2_1: '永釆和「永采實業」簽訂製造協議',
-    certText2_2: '服務類商標註冊證',
-    certText2_3: '獲取專利的魔金'
+    certBluesignName: 'bluesign® APPROVED 認證',
+    certBluesignDesc: '永釆是 bluesign® 系統合作夥伴，產品已註冊於 bluesign® Guide 並通過評估，符合 bluesign® 標準及 BSSL 限值要求，致力於可持續與環保的生產。',
+    certOekoTexName: 'OEKO-TEX® STANDARD 100 認證',
+    certOekoTexDesc: '通過 OEKO-TEX® STANDARD 100 紡織品有害物質檢測，產品達到嬰幼兒產品 I 類安全標準，確保產品安全無害，符合嚴格的國際環保要求。'
   },
   // 聯繫我們
   contact: {

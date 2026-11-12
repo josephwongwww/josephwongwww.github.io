@@ -74,8 +74,6 @@ export default {
     ]
   },
   about: {
-    oneTitle: '热转印烫画',
-    oneDesc: '热转印烫画是一种独特的印刷技术，结合了热转印和烫画两种工艺的特点，将图案印刷在特殊的转印载体上，通过高温高压的方式将图案转印到衣物或其他布料上，形成持久且色彩鲜艳的装饰效果。',
     twoTitle1: '永采',
     twoTitle2: '是一家绿色环保的制造公司',
     twoDesc1: '作为一家环保型公司，永采结合了多个方面来减少对环境的影响并最大限度地减少浪费。',
@@ -84,14 +82,18 @@ export default {
     threeTitle: '环保系统',
     threeDesc1: '永采建立了我们自己的污水处理系统和污水处理池。工业废水经过过滤、沉淀，转化为清水循环使用。减少用水量，减少污染。',
     threeDesc2: '除了污水处理系统，我们还有自己的工业空气净化系统，其工作原理是将室内环境中受污染的空气吸入过滤系统，使空气通过一系列旨在有效去除所有有害颗粒的介质，然后将其释放。',
+    prodTitle: '生产实景',
+    prodSub: 'Production Facilities',
+    productionLine: '生产线',
+    labelProcessing: '标签加工',
+    qualityWork: '品质检测',
+    equipment: '生产设备',
     certTitle: '企业证书',
     certSub: 'Enterprise Certificate',
-    certText1_1: '永采更是Bluesign系统合作伙伴。并专注于可持续发展的未来。',
-    certText1_2: 'OEKO-TEX®使得永采能够通过负责任的决定，保护我们的地球。',
-    certText1_3: '永采和「永采实业」签订制造协议',
-    certText2_1: '永采和「永采实业」签订制造协议',
-    certText2_2: '服务类商标注册证',
-    certText2_3: '获取专利的魔金'
+    certBluesignName: 'bluesign® APPROVED 认证',
+    certBluesignDesc: '永采是 bluesign® 系统合作伙伴，产品已注册于 bluesign® Guide 并通过评估，符合 bluesign® 标准及 BSSL 限值要求，致力于可持续与环保的生产。',
+    certOekoTexName: 'OEKO-TEX® STANDARD 100 认证',
+    certOekoTexDesc: '通过 OEKO-TEX® STANDARD 100 纺织品有害物质检测，产品达到婴幼儿产品 I 类安全标准，确保产品安全无害，符合严格的国际环保要求。'
   },
   contact: {
     title1: 'Hi 很高兴见到你!',

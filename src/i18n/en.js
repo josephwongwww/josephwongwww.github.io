@@ -74,8 +74,6 @@ export default {
     ]
   },
   about: {
-    oneTitle: 'Heat Transfer Printing',
-    oneDesc: 'Heat transfer printing is a unique printing technique that combines the characteristics of heat transfer and iron-on transfer. The design is printed onto a special transfer carrier and then transferred onto garments or other fabrics through high temperature and pressure, producing a durable and vibrant decorative effect.',
     twoTitle1: 'Win Choice',
     twoTitle2: 'is a green, eco-friendly manufacturer',
     twoDesc1: 'As an eco-friendly company, Win Choice combines multiple aspects to reduce its environmental impact and minimise waste.',
@@ -84,14 +82,18 @@ export default {
     threeTitle: 'Eco-friendly Systems',
     threeDesc1: 'Win Choice has established its own wastewater treatment system and treatment ponds. Industrial wastewater is filtered and sedimented into clean water for recycling, reducing water usage and pollution.',
     threeDesc2: 'Besides the wastewater treatment system, we also have our own industrial air purification system. It draws polluted indoor air into the filtration system, passing it through a series of media designed to remove all harmful particles before release.',
+    prodTitle: 'Production Facilities',
+    prodSub: 'Production Facilities',
+    productionLine: 'Production Line',
+    labelProcessing: 'Label Processing',
+    qualityWork: 'Quality Inspection',
+    equipment: 'Equipment',
     certTitle: 'Enterprise Certificate',
     certSub: 'Enterprise Certificate',
-    certText1_1: 'Win Choice is a Bluesign system partner, focused on a sustainable future.',
-    certText1_2: 'OEKO-TEX® enables Win Choice to protect our planet through responsible decisions.',
-    certText1_3: 'Win Choice has signed a manufacturing agreement with "Win Choice Industries".',
-    certText2_1: 'Win Choice has signed a manufacturing agreement with "Win Choice Industries".',
-    certText2_2: 'Service Trademark Registration Certificate',
-    certText2_3: 'Patented Magic Gold'
+    certBluesignName: 'bluesign® APPROVED Certification',
+    certBluesignDesc: 'Win Choice is a bluesign® system partner. Our products are registered in the bluesign® Guide and have passed assessment, meeting bluesign® standards and BSSL limit values, committed to sustainable and eco-friendly production.',
+    certOekoTexName: 'OEKO-TEX® STANDARD 100 Certification',
+    certOekoTexDesc: 'Certified under OEKO-TEX® STANDARD 100 for textile harmful substance testing. Our products meet Class I (infant) safety standards, ensuring they are safe and harmless, compliant with strict international environmental requirements.'
   },
   contact: {
     title1: 'Hi, nice to meet you!',
