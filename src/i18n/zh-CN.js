@@ -10,7 +10,7 @@ export default {
   foot: {
     title1: '即刻联系',
     title2: '定制独一无二的产品',
-    addressLabel: '东莞市桥头镇桥东路南街66号，二栋厂房，二楼及三楼'
+    addressLabel: '香港新蒲岗大有街34号新科技广场20楼2009室'
   },
   backTop: '返回顶部',
   index: {

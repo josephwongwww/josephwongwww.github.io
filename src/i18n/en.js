@@ -10,7 +10,7 @@ export default {
   foot: {
     title1: 'Get In Touch',
     title2: 'Custom-made, One-of-a-kind Products',
-    addressLabel: 'No.66 Qiaodong Road South Street, Qiaotou Town, Dongguan City (2nd & 3rd Floor, Building 2)'
+    addressLabel: 'Room 2009, 20/F, New Tech Plaza, 34 Tai Yau Street, San Po Kong, Hong Kong'
   },
   backTop: 'Back to Top',
   index: {

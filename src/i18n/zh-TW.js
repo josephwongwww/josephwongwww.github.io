@@ -12,7 +12,7 @@ export default {
   foot: {
     title1: '即刻聯繫',
     title2: '定製獨一無二的產品',
-    addressLabel: '東莞市橋頭鎮橋東路南街66號，二棟廠房，二樓及三樓'
+    addressLabel: '香港新蒲崗大有街34號新科技廣場20樓2009室'
   },
   // 返回頂部
   backTop: '返回頂部',
