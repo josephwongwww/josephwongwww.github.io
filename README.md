@@ -2,6 +2,8 @@
 
 基于 http://winchoice.cc/ 的复刻，并做了设计整改（v2）。
 
+线上地址：https://josephwongwww.github.io/
+
 ## 运行
 
 ```bash
@@ -9,6 +11,17 @@ npm install
 npm run dev     # 开发：http://localhost:5173
 npm run build    # 构建：产出 dist/
 ```
+
+## 自动部署（GitHub Pages）
+
+推送到 `main` 分支后，`.github/workflows/deploy.yml` 自动执行 `npm ci && npm run build`，并把 `dist/` 部署到 GitHub Pages。
+
+- Pages 需在仓库 Settings → Pages 中将 Source 设为 **GitHub Actions**（一次性设置）
+- `postbuild` 脚本会把 `dist/index.html` 复制为 `dist/404.html`，使 vue-router history 模式刷新子路由（如 `/product`）不报 404
+
+## 满屏吸附滚动（v3）
+
+宽屏（≥1441px）启用 CSS scroll-snap（`y mandatory` + `scroll-snap-stop: always`）：每个大图区块整屏（100vh）展示，小幅滚动松手弹回当前整屏，大力滚动翻到下一屏；窄屏 zoom 缩放模式下关闭以避免坐标冲突。
 
 ## 技术要点
 
