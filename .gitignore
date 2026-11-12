@@ -1,0 +1,15 @@
+# 构建产物
+dist/
+
+# 依赖
+node_modules/
+
+# 开发过程产物（仅根目录：原始抓取素材与验证截图；src/assets 是构建必需资源，不入此列）
+/screenshots/
+/assets/
+.workbuddy/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.local
