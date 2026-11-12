@@ -184,9 +184,32 @@ function nextCategory() {
   .prolineOne .back, .prolineList .back { left: calc(50% - 50vw); width: 100vw; height: 100%; }
 }
 
-/* 宽屏：深色区块背景全出血 */
-@media (min-width: 1441px) {
-  .prolineOne, .prolineList { height: calc(100vw / 1.8); }
-  .prolineOne .back, .prolineList .back { left: calc(50% - 50vw); width: 100vw; height: 100%; }
+/* ===== 手机端（<768px，原生响应式，无 zoom）===== */
+@media (max-width: 767px) {
+  .modBanner img { height: 52vh; object-position: 10% bottom; }
+
+  .prolineOne { height: auto; min-height: 460px; padding: 44px 20px; flex-direction: column; align-items: stretch; justify-content: center; }
+  .prolineOne::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(20, 16, 46, .62), rgba(20, 16, 46, .3));
+    z-index: 2;
+  }
+  .prolineOne .dvText p:nth-child(1) { font-size: 26px; line-height: 38px; letter-spacing: 2px; margin-bottom: 20px; }
+  .prolineOne .dvText p:nth-child(2), .prolineOne .dvText p:nth-child(3) { font-size: 13px; line-height: 24px; }
+  .prolineOne .dvText p:nth-child(3) { margin-top: 16px; }
+
+  .prolineList { height: auto; padding: 44px 20px 60px; }
+  .listNav { overflow: visible; }
+  .imgList { gap: 14px; }
+  .imgList .img { width: 74vw; height: 54vw; border-radius: 14px; }
+  .imgList .img img { width: 100%; height: 100%; border-radius: 14px; }
+  .custom-slick-arrow { width: 38px; height: 38px; opacity: .55; }
+  .custom-slick-arrow:first-child { left: -2px; }
+  .custom-slick-arrow:last-child { right: -2px; }
+  .dvName { font-size: 22px; line-height: 34px; letter-spacing: 2px; margin-top: 26px; }
+  .dvBtns { gap: 14px; margin-top: 20px; }
+  .dvPrev, .dvNext { padding: 8px 22px; font-size: 14px; }
 }
 </style>

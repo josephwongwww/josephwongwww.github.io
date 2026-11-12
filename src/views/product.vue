@@ -119,4 +119,44 @@ const products = [
   .productOne, .productTwo, .productList { height: 100vh; min-height: 680px; }
   .productOne .back, .productTwo .back, .productList .back { left: calc(50% - 50vw); width: 100vw; height: 100%; }
 }
+
+/* ===== 手机端（<768px，原生响应式，无 zoom）===== */
+@media (max-width: 767px) {
+  .modBanner img { height: 52vh; object-position: 10% bottom; }
+
+  /* 首屏两块：文字改为常规流式，加暗色衬底保证白字可读 */
+  .productOne, .productTwo { height: auto; min-height: 480px; padding: 48px 20px; }
+  .productOne::before, .productTwo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(20, 16, 46, .62), rgba(20, 16, 46, .3));
+    z-index: 2;
+  }
+  .productOne p { position: relative; z-index: 2; }
+  .productOne p:nth-child(1) { position: relative; z-index: 2; width: auto; font-size: 28px; line-height: 42px; top: auto; left: auto; }
+  .productOne p:nth-child(2) { position: relative; z-index: 2; width: auto; font-size: 13px; line-height: 22px; bottom: auto; left: auto; margin-top: 20px; }
+  .productTwo .dvOne { width: auto; }
+  .productTwo .dvOne p { font-size: 28px; line-height: 40px; position: relative; z-index: 2; }
+  .productTwo .dvOne p:nth-child(2) { margin-top: 10px; }
+
+  /* 产品列表：图上文下的卡片流 */
+  .productListBox .stack { display: block; }
+  .productList { height: auto; padding: 28px 16px 40px; display: flex; flex-direction: column-reverse; }
+  .productList .dvList { width: 100%; height: auto; position: static; }
+  .productList .dvList > div {
+    background: rgba(20, 16, 46, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px 22px;
+    border-radius: 14px;
+    max-width: none;
+    margin: -34px 16px 0;
+    position: relative;
+    z-index: 2;
+  }
+  .productList .dvList p:nth-child(1) { font-size: 20px; letter-spacing: 2px; }
+  .productList .dvList p:nth-child(2) { width: auto; font-size: 13px; line-height: 22px; margin-top: 12px; }
+  .productList .back { position: static; width: 100%; height: 58vw; object-fit: cover; z-index: 1; }
+}
 </style>

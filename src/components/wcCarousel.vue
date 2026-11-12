@@ -1,5 +1,5 @@
 <template>
-  <div class="wc-carousel" @mouseenter="pauseAuto" @mouseleave="resumeAuto">
+  <div class="wc-carousel" @mouseenter="pauseAuto" @mouseleave="resumeAuto" @touchstart.passive="onTouchStart" @touchend.passive="onTouchEnd">
     <div class="wc-carousel-track" :style="trackStyle">
       <slot />
     </div>
@@ -67,6 +67,23 @@ const startAuto = () => {
 }
 const pauseAuto = () => { if (timer) clearInterval(timer); timer = null }
 const resumeAuto = () => pauseAuto() || startAuto()
+
+/* 触摸滑动切换（手机端） */
+let touchX = 0
+let touchY = 0
+const onTouchStart = (e) => {
+  touchX = e.touches[0].clientX
+  touchY = e.touches[0].clientY
+  pauseAuto()
+}
+const onTouchEnd = (e) => {
+  const dx = e.changedTouches[0].clientX - touchX
+  const dy = e.changedTouches[0].clientY - touchY
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+    dx < 0 ? next() : prev()
+  }
+  resumeAuto()
+}
 
 onMounted(startAuto)
 onUnmounted(pauseAuto)

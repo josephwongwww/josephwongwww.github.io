@@ -62,4 +62,20 @@ import { jumpUrl } from '../utils/api'
   cursor: pointer;
 }
 #footBox .footBox .right p:hover { color: #fff; }
+
+/* ===== 手机端：页脚纵向堆叠 ===== */
+@media (max-width: 767px) {
+  #footBox .PubPageBox { padding: 36px 20px; }
+  #footBox .footBox { flex-direction: column; align-items: stretch; gap: 36px; }
+  #footBox .footBox .left .dvOne p:nth-child(1),
+  #footBox .footBox .left .dvOne p:nth-child(2) { font-size: 22px; line-height: 34px; }
+  #footBox .footBox .left .dvOne p:nth-child(3),
+  #footBox .footBox .left .dvOne p:nth-child(4) { font-size: 16px; line-height: 30px; margin-top: 18px; }
+  #footBox .footBox .left .dvTwo { margin-top: 26px; flex-direction: column; align-items: flex-start; }
+  #footBox .footBox .left .dvTwo h4 { padding: 0 0 10px; border-right: none; border-bottom: 2px solid rgba(255, 255, 255, .5); display: inline-block; }
+  #footBox .footBox .left .dvTwo h4 img.footLogo { height: 32px; }
+  #footBox .footBox .left .dvTwo p { margin-left: 0; margin-top: 12px; width: auto; font-size: 13px; line-height: 22px; }
+  #footBox .footBox .right { border-left: none; border-top: 2px solid #ffffff; padding: 24px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 20px; }
+  #footBox .footBox .right p { font-size: 15px; line-height: 42px; letter-spacing: 2px; }
+}
 </style>

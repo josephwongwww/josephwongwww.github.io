@@ -172,11 +172,17 @@ function next() {
 
 .aboutFive { position: relative; padding: 0 120px; height: 800px; }
 .aboutFive .back { width: 100%; height: auto; position: absolute; top: 0; left: 0; z-index: 1; }
-/* 宽屏：深色区块背景全出血，与 banner 衔接 */
-@media (min-width: 1441px) {
-  .aboutOne, .aboutTwo, .aboutThree, .aboutSix, .aboutFive { height: calc(100vw / 1.8); }
-  .aboutOne .back, .aboutTwo .back, .aboutThree .back,
-  .aboutSix .back, .aboutFive .back { left: calc(50% - 50vw); width: 100vw; height: 100%; }
+
+/* 修复原站遗留：aboutOne 文字原本无样式被背景图盖住（不可见） */
+.aboutOne p { position: relative; z-index: 3; color: #fff; }
+.aboutOne p:nth-child(1) { font-weight: 700; font-size: 48px; line-height: 60px; padding-top: 120px; }
+.aboutOne p:nth-child(2) { font-size: 20px; width: 560px; line-height: 30px; padding-top: 40px; }
+.aboutOne::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(20, 16, 46, .55), rgba(20, 16, 46, .25));
+  z-index: 2;
 }
 
 /* 宽屏：深色区块背景全出血，与 banner 衔接 */
@@ -184,5 +190,39 @@ function next() {
   .aboutOne, .aboutTwo, .aboutThree, .aboutSix, .aboutFive { height: calc(100vw / 1.8); }
   .aboutOne .back, .aboutTwo .back, .aboutThree .back,
   .aboutSix .back, .aboutFive .back { left: calc(50% - 50vw); width: 100vw; height: 100%; }
+}
+
+/* ===== 手机端（<768px，原生响应式，无 zoom）===== */
+@media (max-width: 767px) {
+  .modBanner img { height: 52vh; object-position: 10% bottom; }
+  .aboutOne, .aboutTwo, .aboutThree { height: auto; min-height: 460px; padding: 44px 20px; }
+  .aboutOne p:nth-child(1) { font-size: 26px; line-height: 38px; padding-top: 0; }
+  .aboutOne p:nth-child(2) { font-size: 13px; line-height: 22px; width: auto; padding-top: 18px; }
+  .aboutTwo p:nth-child(1) { font-size: 30px; line-height: 42px; padding-top: 0; }
+  .aboutTwo p:nth-child(2) { font-size: 20px; line-height: 30px; padding-top: 10px; }
+  .aboutTwo p:nth-child(3), .aboutTwo p:nth-child(4), .aboutTwo p:nth-child(5) { font-size: 13px; line-height: 22px; width: auto; padding-top: 14px; }
+  .aboutThree p:nth-child(1) { font-size: 30px; line-height: 42px; padding-top: 0; }
+  .aboutThree p:nth-child(2), .aboutThree p:nth-child(3) { font-size: 13px; line-height: 22px; width: auto; padding-top: 14px; }
+
+  /* 证书区：纵向堆叠，触摸滚动 */
+  .aboutSix { height: auto; min-height: 0; padding: 44px 20px; flex-direction: column; align-items: stretch; }
+  .aboutSix .ImgCount { position: static; display: flex; align-items: baseline; }
+  .aboutSix .ImgCount p:nth-child(1) { font-size: 34px; line-height: 40px; }
+  .aboutSix .ImgCount p:nth-child(2) { font-size: 20px; line-height: 24px; margin-top: 0; margin-left: 6px; }
+  .aboutSix .ImgOperate { display: none; }
+  .aboutSix .dvImg { margin-left: 0; height: 460px; grid-gap: 40px; }
+  .aboutSix .dvImg p { width: 96px; height: 140px; border-radius: 14px; }
+  .aboutSix .dvImg p img { width: 96px; height: 140px; }
+  .aboutSix .dvImg .on { width: 260px; height: 380px; margin-left: 0; }
+  .aboutSix .dvImg .on img { width: 260px; height: 380px; }
+  .aboutSix .dvText { width: auto; margin: 32px 0 0; }
+  .aboutSix .dvText p:nth-child(1) { font-size: 26px; line-height: 34px; }
+  .aboutSix .dvText p:nth-child(2) { font-size: 15px; line-height: 20px; margin-top: 6px; }
+  .aboutSix .dvText p:nth-child(3) { font-size: 13px; margin-top: 18px; line-height: 22px; }
+  .aboutSix .dvText p:nth-child(4) { font-size: 18px; width: auto; margin-top: 20px; }
+  .aboutSix .dvText p:nth-child(5) { font-size: 13px; margin-top: 20px; line-height: 22px; }
+
+  .aboutFive { height: auto; padding: 0; }
+  .aboutFive .back { position: static; width: 100%; height: auto; }
 }
 </style>

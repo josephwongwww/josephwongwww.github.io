@@ -15,12 +15,13 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
-// 缩放机制改良：1440 设计稿；窄屏按比例缩小适配，宽屏封顶 1 不再放大
-// （原站在 1920 屏会把整站放大 1.33 倍，banner 吃满全屏，观感如手机端放大）
+// 缩放机制改良：1440 设计稿；宽屏封顶 1；平板按比例缩小；
+// 手机（<768px）关闭缩放，走原生响应式布局（见各组件的 max-width:767px 媒体查询）
 const winW = ref(window.innerWidth)
 const winH = ref(window.innerHeight)
 
 const scale = computed(() => {
+  if (winW.value < 768) return 1
   return Math.min(1, winW.value / 1440)
 })
 

@@ -16,4 +16,14 @@
 .modFoot p:nth-child(2) { bottom: 10%; left: 8%; }
 .modFoot p:nth-child(2) span { font-weight: 700; font-size: 30px; line-height: 56px; display: block; }
 .modFoot p:nth-child(3) { font-weight: 700; font-size: 26px; line-height: 40px; writing-mode: vertical-rl; bottom: 6%; left: 52.2%; }
+
+/* ===== 手机端 ===== */
+@media (max-width: 767px) {
+  .modFoot { height: 280px; }
+  .modFoot p:nth-child(1) { top: 12%; left: 20px; }
+  .modFoot p:nth-child(1) span { font-size: 26px; line-height: 34px; }
+  .modFoot p:nth-child(2) { bottom: 14%; left: 20px; }
+  .modFoot p:nth-child(2) span { font-size: 15px; line-height: 26px; }
+  .modFoot p:nth-child(3) { writing-mode: horizontal-tb; font-size: 15px; line-height: 24px; bottom: 14%; left: auto; right: 20px; }
+}
 </style>

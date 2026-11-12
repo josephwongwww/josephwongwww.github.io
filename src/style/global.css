@@ -97,3 +97,12 @@ html { scroll-snap-type: y mandatory; }
 
 /* mytag 占位组件 */
 .my_tag_height { width: 100%; }
+
+/* ===== 手机端（<768px，zoom 已关闭，原生响应式）=====
+   注意：必须放在文件末尾，否则 1440px !important 基础规则会覆盖此块 */
+@media (max-width: 767px) {
+  .PubPageBox { width: 100% !important; }
+  .PubPageBox .Topping { right: 12px; bottom: 56px; }
+  .PubPageBox .Topping img { width: 44px; height: 44px; }
+  .PubPageBox .Topping p { font-size: 12px; }
+}

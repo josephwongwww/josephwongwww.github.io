@@ -305,4 +305,56 @@ const beforeChange = () => {
   .modSeven .back { left: calc(50% - 50vw); right: calc(50% - 50vw); }
   .modThree .back { margin-left: calc((100% - 100vw) / 2); width: 100vw; height: 100%; object-fit: cover; }
 }
+
+/* ===== 手机端（<768px，原生响应式，无 zoom）===== */
+@media (max-width: 767px) {
+  .modBanner .bannerTextBox { height: 62vh; }
+  .modBanner .bannerTextBox .dvTe { left: 20px; top: 32%; max-width: calc(100% - 40px); }
+  .modBanner .bannerTextBox .dvTe p:nth-child(1) { font-size: 32px; letter-spacing: 1px; }
+  .modBanner .bannerTextBox .dvTe p:nth-child(2) { font-size: 14px; width: auto; line-height: 1.7; margin-top: 14px; letter-spacing: 1px; }
+
+  .modOne { padding: 44px 20px 40px; }
+  .modOne p:nth-child(1) { font-size: 24px; line-height: 1.45; }
+  .modOne .scrollHint { font-size: 16px; margin-top: 22px; }
+  .modOne .chevron { margin-top: 12px; }
+
+  .modTwo { padding: 28px 20px 52px; }
+  .modTwo .title p { font-size: 24px; }
+  .modTwo .grid { grid-template-columns: 1fr; gap: 30px; margin-top: 32px; }
+  .modTwo .list p:nth-child(2) { font-size: 19px; margin-top: 12px; }
+  .modTwo .list p:nth-child(3) { font-size: 12px; margin-top: 4px; }
+
+  .modThree { line-height: 0; }
+  .modThree .back { margin-left: 0; width: 100%; height: auto; }
+
+  .modFour { padding: 44px 20px; }
+  .modFour .dvOneBox { flex-direction: column; gap: 30px; }
+  .modFour .dvOneBox .dvOne p:nth-child(1) { font-size: 24px; }
+  .modFour .dvOneBox .dvOne p:nth-child(2) { font-size: 52px; }
+  .modFour .dvOneBox .dvOne p:nth-child(3) { font-size: 15px; margin-top: 4px; }
+  .modFour .back { margin-top: 30px; }
+
+  /* 深色满屏区块：高度随内容自适应，背景 cover */
+  .modFive, .modSix, .modSeven, .modEight { height: auto; min-height: 420px; padding: 48px 20px; }
+  .modFive p:nth-child(1) { font-size: 28px; padding-top: 0; }
+  .modFive p:nth-child(2) { font-size: 14px; width: auto; line-height: 24px; padding-top: 20px; letter-spacing: 1px; }
+  .modSix p:nth-child(1), .modSix p:nth-child(2) { font-size: 30px; line-height: 44px; padding-top: 0; }
+  .modSix p:nth-child(2) { padding-top: 12px; text-indent: 1em; }
+  .modSix p:nth-child(3) { font-size: 16px; line-height: 30px; padding-top: 40px; width: auto; }
+  .modSix p:nth-child(4) { font-size: 20px; padding-top: 6px; }
+
+  .modSeven .sevenHead p:nth-child(1) { font-size: 30px; }
+  .modSeven .sevenHead p:nth-child(2) { font-size: 13px; margin-top: 8px; }
+  .modSeven .listBox { flex-direction: column; margin-top: 36px; }
+  .modSeven .listBox .list { padding: 22px 0; border-right: none; border-bottom: 1px solid rgba(255, 255, 255, .25); }
+  .modSeven .listBox .list:last-child { border-bottom: none; }
+  .modSeven .listBox .list h4 { font-size: 20px; line-height: 26px; }
+  .modSeven .listBox .list p { font-size: 13px; line-height: 20px; margin-top: 12px; }
+
+  .modEight p:nth-child(1), .modEight p:nth-child(2) { font-size: 30px; line-height: 42px; }
+  .modEight p:nth-child(1) { padding-top: 0; }
+  .modEight p:nth-child(2) { padding-top: 8px; }
+  .modEight p:nth-child(3) { font-size: 13px; width: auto; line-height: 22px; padding-top: 32px; }
+  .modEight p:nth-child(4) { font-size: 22px; padding-top: 36px; }
+}
 </style>
