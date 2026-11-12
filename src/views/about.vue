@@ -7,24 +7,24 @@
 
     <div class="PubPageBox">
       <div class="aboutOne">
-        <p>热转印烫画</p>
-        <p>热转印烫画是一种独特的印刷技术，结合了热转印和烫画两种工艺的特点,将图案印刷在特殊的转印载体上，通过高温高压的方式将图案转印到衣物或其他布料上，形成持久且色彩鲜艳的装饰效果。</p>
+        <p>{{ t('about.oneTitle') }}</p>
+        <p>{{ t('about.oneDesc') }}</p>
         <img :src="about1" class="back widthFix" />
       </div>
 
       <div class="aboutTwo">
-        <p>永釆</p>
-        <p>是一家绿色环保的制造公司</p>
-        <p>作为一家环保型公司，永釆结合了多个方面来减少对环境的影响并最大限度地减少浪费。</p>
-        <p>永釆更是蓝标 (Bluesign) 系统合作伙伴。 我们的目标是不断提高我们的环境绩效，并专注于可持续发展的未来。</p>
-        <p>此外，我们亦承担社会责任，包括在环境方面。 例如污水处理系统 和 创新产品以解决环境问题。</p>
+        <p>{{ t('about.twoTitle1') }}</p>
+        <p>{{ t('about.twoTitle2') }}</p>
+        <p>{{ t('about.twoDesc1') }}</p>
+        <p>{{ t('about.twoDesc2') }}</p>
+        <p>{{ t('about.twoDesc3') }}</p>
         <img :src="about2" class="back widthFix" />
       </div>
 
       <div class="aboutThree">
-        <p>环保系统</p>
-        <p>永釆建立了我们自己的污水处理系统和污水处理池。 工业废水经过过滤、沉淀，转化为清水循环使用。 减少用水量，减少污染。</p>
-        <p>除了污水处理系统，我们还有自己的工业空气净化系统，其工作原理是将室内环境中受污染的空气吸入过滤系统，使空气通过一系列旨在有效去除所有有害颗粒的介质，然后将其释放 。</p>
+        <p>{{ t('about.threeTitle') }}</p>
+        <p>{{ t('about.threeDesc1') }}</p>
+        <p>{{ t('about.threeDesc2') }}</p>
         <img :src="about3" class="back widthFix" />
       </div>
 
@@ -43,18 +43,18 @@
           </p>
         </div>
         <div v-if="sel == 1" class="dvText">
-          <p>企业证书</p>
-          <p>Enterprise Certificate</p>
-          <p>永釆更是Bluesign系统合作伙伴。并专注于可持续发展的未来。</p>
-          <p>OEKO-TEX®使得永釆能够通过负责任的决定，保护我们的地球。</p>
-          <p>永釆和“永采实业”签订制造协议</p>
+          <p>{{ t('about.certTitle') }}</p>
+          <p>{{ t('about.certSub') }}</p>
+          <p>{{ t('about.certText1_1') }}</p>
+          <p>{{ t('about.certText1_2') }}</p>
+          <p>{{ t('about.certText1_3') }}</p>
         </div>
         <div v-else class="dvText">
-          <p>企业证书</p>
-          <p>Enterprise Certificate</p>
-          <p>永釆和“永采实业”签订制造协议</p>
-          <p>服务类商标注册证</p>
-          <p>获取专利的魔金</p>
+          <p>{{ t('about.certTitle') }}</p>
+          <p>{{ t('about.certSub') }}</p>
+          <p>{{ t('about.certText2_1') }}</p>
+          <p>{{ t('about.certText2_2') }}</p>
+          <p>{{ t('about.certText2_3') }}</p>
         </div>
         <img :src="about7" class="back widthFix" />
       </div>
@@ -73,6 +73,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { getImageUrl } from '../utils/api'
+import { useI18n } from '../i18n'
 import modFoot from '../components/modFoot.vue'
 import banner from '../assets/about/banner.png'
 import about1 from '../assets/about/about1.png'
@@ -80,6 +81,8 @@ import about2 from '../assets/about/about2.png'
 import about3 from '../assets/about/about3.png'
 import about5 from '../assets/about/about5.png'
 import about7 from '../assets/about/about7.png'
+
+const { t } = useI18n()
 
 const dvImgRef = ref(null)
 const sel = ref(1)

@@ -4,22 +4,21 @@
       <div class="footBox flex-between">
         <div class="left">
           <div class="dvOne">
-            <p>即刻联系</p>
-            <p>定制独一无二的产品</p>
+            <p>{{ t('foot.title1') }}</p>
+            <p>{{ t('foot.title2') }}</p>
             <p>(86) 180 4694 3817</p>
             <p>julian@win-choice.com</p>
           </div>
           <div class="dvTwo flex-start">
             <h4><img src="../assets/logo2.png" class="footLogo" /></h4>
-            <p>东莞市桥头镇桥东路南街66号，二栋厂房，二楼及三楼</p>
+            <p>{{ t('foot.addressLabel') }}</p>
           </div>
         </div>
         <div class="right">
-          <p @click="jumpUrl('index')">首页</p>
-          <p @click="jumpUrl('product')">产品中心</p>
-          <p @click="jumpUrl('about')">关于我们</p>
-          <p @click="jumpUrl('contact')">联系我们</p>
-          <p @click="jumpUrl('proline')">生产线展示</p>
+          <p @click="jumpUrl('index')">{{ t('nav.home') }}</p>
+          <p @click="jumpUrl('product')">{{ t('nav.product') }}</p>
+          <p @click="jumpUrl('about')">{{ t('nav.about') }}</p>
+          <p @click="jumpUrl('contact')">{{ t('nav.contact') }}</p>
         </div>
       </div>
     </div>
@@ -28,6 +27,8 @@
 
 <script setup>
 import { jumpUrl } from '../utils/api'
+import { useI18n } from '../i18n'
+const { t } = useI18n()
 </script>
 
 <style scoped>

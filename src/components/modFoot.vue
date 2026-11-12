@@ -2,10 +2,15 @@
   <div class="modFoot">
     <p><span>Win Choice</span><span>Industries ltd</span></p>
     <p><span>(86) 180 4694 3817</span><span>julian@win-choice.com</span></p>
-    <p>永采實業有限公司</p>
+    <p>{{ t('modFoot.company') }}</p>
     <img src="../assets/index/img9.png" class="back" />
   </div>
 </template>
+
+<script setup>
+import { useI18n } from '../i18n'
+const { t } = useI18n()
+</script>
 
 <style scoped>
 .modFoot { position: relative; height: clamp(360px, 46vh, 560px); overflow: hidden; }

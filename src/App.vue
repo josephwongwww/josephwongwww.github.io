@@ -5,7 +5,7 @@
       <div class="PubPageBox">
         <div v-show="showTop" class="Topping flex-center" @click="scrollToTop">
           <img src="./assets/top.png" class="widthFix" />
-          <p>返回顶部</p>
+          <p>{{ t('backTop') }}</p>
         </div>
       </div>
     </div>
@@ -14,6 +14,9 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useI18n } from './i18n'
+
+const { t } = useI18n()
 
 // 缩放机制改良：1440 设计稿；宽屏封顶 1；平板按比例缩小；
 // 手机（<768px）关闭缩放，走原生响应式布局（见各组件的 max-width:767px 媒体查询）

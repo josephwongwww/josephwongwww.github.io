@@ -23,7 +23,7 @@ class Api {
   }
 
   getImageUrl(t) {
-    // t 形如 "zhen1.png" / "product/list1.png" / "proline/banner.png"
+    // t 形如 "zhen1.png" / "product/list1.png"
     return modules['../assets/' + t] || ''
   }
 }

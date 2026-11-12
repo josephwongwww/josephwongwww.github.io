@@ -8,37 +8,37 @@
     <div class="PubPageBox">
       <div class="contactOne flex-start">
         <div>
-          <p>Hi 很高兴见到你!</p>
-          <p>我们的产品遍及世界各地，我们的客户就是我们的合作伙伴，合作者和朋友。</p>
-          <p>想看更多的案例，了解我们的产品吗？请拨打我们的电话，或联系邮箱。</p>
-          <p>我们期待你们的到来，让我们可以证明，在质量、服务和准时方面的奉献精神！</p>
+          <p>{{ t('contact.title1') }}</p>
+          <p>{{ t('contact.desc1') }}</p>
+          <p>{{ t('contact.desc2') }}</p>
+          <p>{{ t('contact.desc3') }}</p>
         </div>
         <img :src="contact1" class="back widthFix" />
       </div>
 
       <div class="modSeven">
         <div class="sevenHead">
-          <p>联系我们</p>
-          <p>Contact Us</p>
+          <p>{{ t('contact.modSevenTitle') }}</p>
+          <p>{{ t('contact.modSevenSub') }}</p>
         </div>
         <div class="listBox">
           <div class="list">
-            <h4>东莞办事处</h4>
+            <h4>{{ t('offices.dongguan') }}</h4>
             <p>Tel： (86) 180 4694 3817</p>
             <p>Mail： julian@win-choice.com</p>
-            <p>Add.：东莞市桥头镇桥东路南街66号, 二栋厂房，二楼及三楼 </p>
+            <p>Add.：{{ t('offices.dongguanAddr') }}</p>
           </div>
           <div class="list">
-            <h4>香港办事处</h4>
+            <h4>{{ t('offices.hongkong') }}</h4>
             <p>Tel： (852) 3521 0169</p>
             <p>Mail： julian@win-choice.com</p>
-            <p>Add.：香港新蒲岗大有街34号新科技广场20楼2009室</p>
+            <p>Add.：{{ t('offices.hongkongAddr') }}</p>
           </div>
           <div class="list">
-            <h4>越南办事处</h4>
+            <h4>{{ t('offices.vietnam') }}</h4>
             <p>Tel： (86) 5883 0806</p>
             <p>Mail： julian@win-choice.com</p>
-            <p>Add.：SUNRISE CITY NORTH 越南第7区丹洪市阮友街27号</p>
+            <p>Add.：{{ t('offices.vietnamAddr') }}</p>
           </div>
         </div>
         <div class="back"></div>
@@ -52,9 +52,12 @@
 </template>
 
 <script setup>
+import { useI18n } from '../i18n'
 import modFoot from '../components/modFoot.vue'
 import banner from '../assets/contact/banner.png'
 import contact1 from '../assets/contact/contact1.png'
+
+const { t } = useI18n()
 </script>
 
 <style scoped>
