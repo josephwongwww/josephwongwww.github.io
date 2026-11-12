@@ -99,6 +99,14 @@
         <img :src="img6" class="back widthFix" />
       </div>
 
+      <div class="modEight">
+        <p>Win Choice</p>
+        <p>Industries ltd</p>
+        <p>我们是一家服装辅料制造商，成立于 2005 年，工厂位于中国南方。 我们以生产高质量的热转印、印刷织标和织贴、升华印刷、激光切割标签而闻名。</p>
+        <p>永采實業有限公司</p>
+        <img :src="img9" class="back widthFix" />
+      </div>
+
       <div class="modSeven">
         <div class="sevenHead">
           <p>联系我们</p>
@@ -125,14 +133,6 @@
           </div>
         </div>
         <div class="back"></div>
-      </div>
-
-      <div class="modEight">
-        <p>Win Choice</p>
-        <p>Industries ltd</p>
-        <p>我们是一家服装辅料制造商，成立于 2005 年，工厂位于中国南方。 我们以生产高质量的热转印、印刷织标和织贴、升华印刷、激光切割标签而闻名。</p>
-        <p>永采實業有限公司</p>
-        <img :src="img9" class="back widthFix" />
       </div>
     </div>
 
@@ -300,7 +300,7 @@ const beforeChange = () => {
   .modThree { height: 100vh; }
   .modFour { min-height: 100vh; }
   .modFive, .modSix, .modEight { height: 100vh; min-height: 680px; }
-  .modSeven { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+  .modSeven { min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 100px 120px 80px; }
   .modFive .back, .modSix .back, .modEight .back { left: calc(50% - 50vw); width: 100vw; height: 100%; }
   .modSeven .back { left: calc(50% - 50vw); right: calc(50% - 50vw); }
   .modThree .back { margin-left: calc((100% - 100vw) / 2); width: 100vw; height: 100%; object-fit: cover; }
