@@ -29,7 +29,8 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { useI18n, translate } from '../i18n'
+import { useI18n } from '../i18n'
+import { updateDocumentMetadata } from '../utils/seo'
 
 defineProps(['navSel'])
 const menuOpen = ref(false)
@@ -42,7 +43,7 @@ watch(() => route.fullPath, () => { menuOpen.value = false })
 function switchLocale(code) {
   setLocale(code)
   const route = router.currentRoute.value
-  if (route.meta.titleKey) document.title = translate(route.meta.titleKey)
+  updateDocumentMetadata(route.meta.titleKey)
 }
 </script>
 

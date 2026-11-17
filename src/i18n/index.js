@@ -35,7 +35,8 @@ export function setLocale(code) {
     localStorage.setItem(STORAGE_KEY, code)
   }
   if (typeof document !== 'undefined') {
-    document.documentElement.setAttribute('lang', code)
+    const languageTags = { 'zh-TW': 'zh-Hant', 'zh-CN': 'zh-Hans', en: 'en' }
+    document.documentElement.setAttribute('lang', languageTags[code])
   }
 }
 

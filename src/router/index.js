@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { translate } from '../i18n'
+import { updateDocumentMetadata } from '../utils/seo'
 
 const routes = [
   { path: '/', name: 'index', component: () => import('../views/index.vue'), meta: { titleKey: 'nav.home' } },
@@ -20,7 +20,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-  if (to.meta.titleKey) document.title = translate(to.meta.titleKey)
+  updateDocumentMetadata(to.meta.titleKey)
 })
 
 export default router
