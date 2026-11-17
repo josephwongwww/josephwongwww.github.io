@@ -1,12 +1,12 @@
 <template>
   <div class="headBox">
-    <div class="navBoxFirst" :class="{ visible: showNav }">
+    <div class="navBoxFirst visible">
       <div class="navInner">
-        <img src="../assets/winchoice-logo.png" class="headb" />
-        <button class="menuBtn" :class="{ open: menuOpen }" aria-label="菜单" @click="menuOpen = !menuOpen">
+        <router-link class="brandLink" to="/" aria-label="Win Choice"><img src="../assets/winchoice-logo.png" class="headb" alt="Win Choice Industries Ltd." /></router-link>
+        <button class="menuBtn" :class="{ open: menuOpen }" :aria-label="t('conversion.menu')" :aria-expanded="menuOpen" aria-controls="main-menu" @click="menuOpen = !menuOpen">
           <span /><span /><span />
         </button>
-        <div class="navList" :class="{ open: menuOpen }" @click.capture="menuOpen = false">
+        <div id="main-menu" class="navList" :class="{ open: menuOpen }" @click.capture="menuOpen = false">
           <router-link to="/"><p :class="navSel == 1 ? 'on' : ''">{{ t('nav.home') }}</p></router-link>
           <router-link to="/product"><p :class="navSel == 2 ? 'on' : ''">{{ t('nav.product') }}</p></router-link>
           <router-link to="/about"><p :class="navSel == 3 ? 'on' : ''">{{ t('nav.about') }}</p></router-link>
@@ -27,20 +27,16 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useI18n, translate } from '../i18n'
-import { useScrollState } from '../utils/scrollState'
+
 defineProps(['navSel'])
 const menuOpen = ref(false)
 const { t, locale, setLocale, locales } = useI18n()
 const router = useRouter()
 const route = useRoute()
-const { scrolled } = useScrollState()
-
-// 导航显隐：非首页始终显示；首页未滚动时隐藏，滚动后弹出
-const isHome = computed(() => route.name === 'index' || route.name === 'index2' || route.path === '/')
-const showNav = computed(() => !isHome.value || scrolled.value)
+watch(() => route.fullPath, () => { menuOpen.value = false })
 
 // 切换语言后同步更新文档标题
 function switchLocale(code) {
@@ -56,14 +52,14 @@ function switchLocale(code) {
 /* 毛玻璃悬浮导航：内层与 1440 内容容器对齐，宽屏不再拉满全屏 */
 .navBoxFirst {
   width: 100%;
-  padding: 30px 0;
+  padding: 18px 0;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(40px);
-  background: rgba(20, 16, 46, 0.18);
-  /* 首屏（首页未滚动）隐藏，滚动后弹出 */
+  background: rgba(32, 24, 65, 0.97);
+  /* Navigation stays visible from first paint. */
   opacity: 0;
   transform: translateY(-100%);
   pointer-events: none;
@@ -78,13 +74,14 @@ function switchLocale(code) {
   width: 1440px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 120px;
+  padding: 0 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
 }
-.headb { width: auto; height: 55px; }
+.brandLink { display: block; background: #fff; padding: 6px 10px; border-radius: 5px; flex-shrink: 0; }
+.headb { width: auto; height: 43px; }
 
 .navList { display: flex; align-items: center; justify-content: flex-end; }
 .navList + .langSwitch { margin-left: 40px; }
@@ -110,7 +107,7 @@ function switchLocale(code) {
   font-size: 18px;
   color: #fff;
   cursor: pointer;
-  margin-left: 70px;
+  margin-left: 36px;
   padding: 0 6px 6px;
   white-space: nowrap;
 }

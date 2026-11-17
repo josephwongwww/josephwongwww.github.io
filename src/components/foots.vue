@@ -6,8 +6,8 @@
           <div class="dvOne">
             <p>{{ t('foot.title1') }}</p>
             <p>{{ t('foot.title2') }}</p>
-            <p>+852 68249042</p>
-            <p>julian@win-choice.com</p>
+            <p><a class="contactLink" href="tel:+85268249042">+852 68249042</a></p>
+            <p><a class="contactLink" href="mailto:julian@win-choice.com">julian@win-choice.com</a></p>
           </div>
           <div class="dvTwo flex-start">
             <h4><img src="../assets/logo2.png" class="footLogo" /></h4>

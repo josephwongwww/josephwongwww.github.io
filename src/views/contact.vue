@@ -1,6 +1,7 @@
 <template>
   <div>
     <heads :navSel="4" />
+    <InquiryPanel />
     <div class="modBanner">
       <img :src="banner" class="widthFix" />
     </div>
@@ -24,20 +25,20 @@
         <div class="listBox">
           <div class="list">
             <h4>{{ t('offices.dongguan') }}</h4>
-            <p>Tel： +852 68249042</p>
-            <p>Mail： julian@win-choice.com</p>
+            <p>Tel： <a class="contactLink" href="tel:+85268249042">+852 68249042</a></p>
+            <p>Mail： <a class="contactLink" href="mailto:julian@win-choice.com">julian@win-choice.com</a></p>
             <p>Add.：{{ t('offices.dongguanAddr') }}</p>
           </div>
           <div class="list">
             <h4>{{ t('offices.hongkong') }}</h4>
-            <p>Tel： (852) 3521 0169</p>
-            <p>Mail： julian@win-choice.com</p>
+            <p>Tel： <a class="contactLink" href="tel:+85235210169">(852) 3521 0169</a></p>
+            <p>Mail： <a class="contactLink" href="mailto:julian@win-choice.com">julian@win-choice.com</a></p>
             <p>Add.：{{ t('offices.hongkongAddr') }}</p>
           </div>
           <div class="list">
             <h4>{{ t('offices.vietnam') }}</h4>
             <p>Tel： (86) 5883 0806</p>
-            <p>Mail： julian@win-choice.com</p>
+            <p>Mail： <a class="contactLink" href="mailto:julian@win-choice.com">julian@win-choice.com</a></p>
             <p>Add.：{{ t('offices.vietnamAddr') }}</p>
           </div>
         </div>
@@ -52,6 +53,7 @@
 </template>
 
 <script setup>
+import InquiryPanel from '../components/InquiryPanel.vue'
 import { useI18n } from '../i18n'
 import modFoot from '../components/modFoot.vue'
 import banner from '../assets/contact/banner.png'

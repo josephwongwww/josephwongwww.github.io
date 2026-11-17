@@ -61,7 +61,7 @@ button:focus, button:focus-visible { outline: 4px auto -webkit-focus-ring-color;
 /* ===== 满屏吸附滚动 =====
    宽屏（zoom=1）时启用：小幅滚动松手弹回当前整屏，大力滚动翻到下一屏；
    窄屏处于 zoom 缩放模式，滚动坐标被缩放，关闭吸附避免冲突 */
-html { scroll-snap-type: y mandatory; }
+html { scroll-snap-type: y proximity; }
 @media (max-width: 1439px) { html { scroll-snap-type: none; } }
 
 /* 内容容器：固定 1440px 设计稿 */
@@ -105,4 +105,78 @@ html { scroll-snap-type: y mandatory; }
   .PubPageBox .Topping { right: 12px; bottom: 56px; }
   .PubPageBox .Topping img { width: 44px; height: 44px; }
   .PubPageBox .Topping p { font-size: 12px; }
+}
+
+/* Business entry points share the existing purple brand palette. */
+a.contactLink { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #b18bff; outline-offset: 4px; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: #63508b; }
+.actionRow { display: flex; flex-wrap: wrap; gap: 12px; }
+a.action { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 14px 24px; border-radius: 6px; font-size: 16px; font-weight: 600; line-height: 1.4; text-align: center; transition: background .2s; }
+a.primary { background: #493179; color: #fff; }
+a.primary:hover { background: #322052; }
+a.secondary { color: #493179; background: #fff; border: 1px solid #d8cfe6; }
+a.secondary:hover { background: #eee8f6; }
+.businessHero { max-width: 1440px; margin: auto; padding: 155px 90px 72px; min-height: 760px; display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: 64px; background: #faf8fd; scroll-snap-align: start; }
+.heroCopy h1 { font-size: 56px; line-height: 1.2; color: #2e2148; margin: 22px 0; letter-spacing: -1px; text-wrap: balance; overflow-wrap: break-word; }
+.heroDescription { color: #655b72; font-size: 18px; line-height: 1.9; margin-bottom: 30px; }
+.heroContact { margin-top: 24px; font-size: 14px; }
+.heroContact a { color: #66547f; }
+.heroVisual { position: relative; min-width: 0; }
+.heroVisual img { width: 100%; height: 460px; object-fit: cover; border-radius: 140px 12px 12px 12px; }
+.heroVisual span { display: block; margin-top: 18px; color: #645775; font-size: 13px; letter-spacing: 1px; }
+.productCatalog { padding: 155px 120px 64px; background: #faf8fd; scroll-margin-top: 110px; }
+.productCatalog h1 { font-size: 44px; line-height: 1.25; color: #2e2148; margin: 18px 0; }
+.catalogIntro { color: #6c6278; line-height: 1.8; }
+.categoryFilters { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.categoryFilters button { background: #fff; border: 1px solid #d9d1e5; color: #493179; min-height: 46px; }
+.categoryFilters button[aria-pressed="true"] { background: #493179; color: #fff; border-color: #493179; }
+.productCount { margin: 24px 0 14px; font-size: 13px; color: #746681; }
+.productDirectory { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.productDirectory a { display: flex; gap: 14px; align-items: center; padding: 18px; color: #3c2d54; background: #fff; border: 1px solid #e4ddec; border-radius: 6px; min-height: 72px; }
+.productDirectory a:hover { background: #efe9f8; border-color: #ad97c8; }
+.productDirectory a > span:nth-child(2) { flex: 1; }
+.productNumber { color: #947da9; font-size: 12px; }
+.productList { scroll-margin-top: 110px; }
+.productActions { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin-top: 28px; }
+.productActions > a:last-child { font-size: 14px; color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.productActions .primary { background: #fff; color: #33234e; }
+.productActions .primary:hover { background: #eee7f8; }
+.inquiryPanel { max-width: 1440px; margin: auto; padding: 155px 120px 80px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; background: #faf8fd; scroll-margin-top: 100px; }
+.inquiryIntro h1 { color: #2e2148; font-size: 42px; line-height: 1.3; margin: 22px 0; }
+.inquiryIntro > p:not(.eyebrow) { color: #6c6278; line-height: 1.9; margin-bottom: 30px; }
+.inquiryIntro > a { display: block; color: #493179; margin-top: 14px; overflow-wrap: anywhere; }
+.inquiryEmail { font-weight: 700; font-size: 20px; }
+.inquiryForm { background: #fff; border: 1px solid #e6dfee; border-radius: 12px; padding: 30px; min-width: 0; }
+.inquiryForm label { display: block; font-size: 14px; color: #49365f; font-weight: 600; margin-bottom: 8px; }
+.inquiryForm input, .inquiryForm select, .inquiryForm textarea { width: 100%; min-width: 0; box-sizing: border-box; border: 1px solid #cfc5db; border-radius: 5px; padding: 12px; font: inherit; color: #372947; background: #fff; margin-bottom: 20px; }
+.inquiryForm textarea { resize: vertical; }
+.inquiryFields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.inquiryForm .action { width: 100%; }
+.inquiryNote { color: #766c80; font-size: 12px; line-height: 1.8; margin-top: 16px; }
+.inquiryNote a { color: #493179; overflow-wrap: anywhere; text-decoration: underline; }
+@media (max-width: 767px) {
+  .businessHero { padding: 108px 22px 40px; min-height: auto; grid-template-columns: 1fr; gap: 28px; }
+  .heroCopy h1 { font-size: 36px; margin: 16px 0; }
+  .heroDescription { font-size: 15px; line-height: 1.8; margin-bottom: 22px; }
+  .heroVisual img { height: 260px; border-radius: 70px 8px 8px 8px; }
+  .actionRow { gap: 10px; }
+  .actionRow .action { flex: 1 1 auto; padding: 13px 16px; font-size: 14px; }
+  .productCatalog { padding: 110px 20px 40px; }
+  .productCatalog h1 { font-size: 30px; }
+  .catalogIntro { font-size: 14px; }
+  .categoryFilters { gap: 8px; }
+  .categoryFilters button { padding: 10px 14px; font-size: 13px; }
+  .productDirectory { grid-template-columns: 1fr; }
+  .productDirectory a { min-height: 56px; padding: 14px; font-size: 14px; }
+  .productActions { gap: 14px; }
+  .productActions .action { width: 100%; font-size: 14px; padding: 12px; }
+  .inquiryPanel { padding: 108px 20px 40px; grid-template-columns: 1fr; gap: 28px; }
+  .inquiryIntro h1 { font-size: 30px; margin: 16px 0; }
+  .inquiryIntro > p:not(.eyebrow) { font-size: 14px; margin-bottom: 20px; }
+  .inquiryForm { padding: 20px; }
+  .inquiryFields { grid-template-columns: 1fr; gap: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

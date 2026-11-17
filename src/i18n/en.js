@@ -1,5 +1,40 @@
 // English
 export default {
+  conversion: {
+    "menu": "Menu",
+    "eyebrow": "WIN CHOICE · SINCE 2005",
+    "title": "Small details. A lasting brand impression.",
+    "desc": "Custom garment accessories, from heat transfers and silicone labels to special-effect prints. Explore the right finish for your brand, from development through production.",
+    "browse": "Explore products",
+    "inquire": "Request samples / a quote",
+    "caption": "Reflective · Iridescent · Dimensional",
+    "catalog": "Find your next finishing touch",
+    "catalogDesc": "Browse by finish and material, or choose a product to explore the details.",
+    "all": "All products",
+    "categories": [
+        "Classic transfers",
+        "Special effects",
+        "Reflective & glow",
+        "Silicone & patches"
+    ],
+    "details": "View details",
+    "ask": "Enquire about this product",
+    "back": "Back to product directory",
+    "count": "products",
+    "inquiryTitle": "Let’s discuss your next project",
+    "inquiryDesc": "Choose a product and tell us what you need to start a conversation about samples and pricing.",
+    "product": "Product of interest",
+    "general": "Not sure / help me choose",
+    "name": "Name / company",
+    "email": "Email address",
+    "quantity": "Estimated quantity (optional)",
+    "message": "Project details",
+    "placeholder": "Size, fabric, colours, application and preferred delivery date",
+    "send": "Open email to send enquiry",
+    "note": "This opens your email app with your enquiry filled in. Review and send it there. You can also email us directly at",
+    "call": "Call us",
+    "founded": "Established in 2005"
+},
   langName: 'EN',
   nav: {
     home: 'Home',
