@@ -24,7 +24,7 @@
         <div class="listBox">
           <div class="list">
             <h4>{{ t('offices.dongguan') }}</h4>
-            <p>Tel： (86) 180 4694 3817</p>
+            <p>Tel： +852 68249042</p>
             <p>Mail： julian@win-choice.com</p>
             <p>Add.：{{ t('offices.dongguanAddr') }}</p>
           </div>

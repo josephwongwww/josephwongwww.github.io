@@ -1,7 +1,7 @@
 <template>
   <div class="modFoot">
     <p><span>Win Choice</span><span>Industries ltd</span></p>
-    <p><span>(86) 180 4694 3817</span><span>julian@win-choice.com</span></p>
+    <p><span>+852 68249042</span><span>julian@win-choice.com</span></p>
     <p>{{ t('modFoot.company') }}</p>
     <img src="../assets/index/img9.png" class="back" />
   </div>

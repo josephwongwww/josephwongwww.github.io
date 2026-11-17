@@ -6,7 +6,7 @@
           <div class="dvOne">
             <p>{{ t('foot.title1') }}</p>
             <p>{{ t('foot.title2') }}</p>
-            <p>(86) 180 4694 3817</p>
+            <p>+852 68249042</p>
             <p>julian@win-choice.com</p>
           </div>
           <div class="dvTwo flex-start">
